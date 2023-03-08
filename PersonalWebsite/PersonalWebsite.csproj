@@ -1,0 +1,69 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+  <ItemGroup>
+    <Content Include="App_Plugins\xStatic\css\xStatic.css" />
+    <Content Include="App_Plugins\xStatic\dashboards\ActionForm.html" />
+    <Content Include="App_Plugins\xStatic\dashboards\ActionsDashboard.html" />
+    <Content Include="App_Plugins\xStatic\dashboards\ConfigDashboard.html" />
+    <Content Include="App_Plugins\xStatic\dashboards\ExportTypeForm.html" />
+    <Content Include="App_Plugins\xStatic\dashboards\ExportTypesDashboard.html" />
+    <Content Include="App_Plugins\xStatic\dashboards\Form.html" />
+    <Content Include="App_Plugins\xStatic\dashboards\InfoDashboard.html" />
+    <Content Include="App_Plugins\xStatic\dashboards\MainDashboard.html" />
+    <Content Include="App_Plugins\xStatic\fields\CheckBoxListField.html" />
+    <Content Include="App_Plugins\xStatic\fields\ConfigurableTypeField.html" />
+    <Content Include="App_Plugins\xStatic\fields\DeploymentTargetField.css" />
+    <Content Include="App_Plugins\xStatic\fields\DeploymentTargetField.html" />
+    <Content Include="App_Plugins\xStatic\fields\ExportTypeField.html" />
+    <Content Include="App_Plugins\xStatic\fields\htmlpage.html" />
+    <Content Include="App_Plugins\xStatic\fields\mediapicker.html" />
+    <Content Include="App_Plugins\xStatic\fields\multipicker.html" />
+    <Content Include="App_Plugins\xStatic\fields\Text.html" />
+    <Content Include="App_Plugins\xStatic\fields\TypeField.html" />
+    <Content Include="App_Plugins\xStatic\lang\en-GB.xml" />
+    <Content Include="App_Plugins\xStatic\lang\en-US.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App_Plugins\xStatic\api\apis.js" />
+    <None Include="App_Plugins\xStatic\dashboards\ActionsDashboard.js" />
+    <None Include="App_Plugins\xStatic\dashboards\ConfigDashboard.js" />
+    <None Include="App_Plugins\xStatic\dashboards\ExportTypesDashboard.js" />
+    <None Include="App_Plugins\xStatic\dashboards\InfoDashboard.js" />
+    <None Include="App_Plugins\xStatic\dashboards\MainDashboard.js" />
+    <None Include="App_Plugins\xStatic\fields\CheckBoxListField.js" />
+    <None Include="App_Plugins\xStatic\fields\ConfigurableTypeField.js" />
+    <None Include="App_Plugins\xStatic\fields\DeploymentTargetField.js" />
+    <None Include="App_Plugins\xStatic\fields\ExportTypeField.js" />
+    <None Include="App_Plugins\xStatic\fields\mediapicker.js" />
+    <None Include="App_Plugins\xStatic\fields\multipicker.js" />
+    <None Include="App_Plugins\xStatic\fields\TypeField.js" />
+    <None Include="App_Plugins\xStatic\package.manifest" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Umbraco.Cms" Version="11.2.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <!-- Opt-in to app-local ICU to ensure consistent globalization APIs across different platforms -->
+    <PackageReference Include="Microsoft.ICU.ICU4C.Runtime" Version="68.2.0.9" />
+    <PackageReference Include="xStatic" Version="3.1.0" />
+    <RuntimeHostConfigurationOption Include="System.Globalization.AppLocalIcu" Value="68.2.0.9" Condition="$(RuntimeIdentifier.StartsWith('linux')) or $(RuntimeIdentifier.StartsWith('win')) or ('$(RuntimeIdentifier)' == '' and !$([MSBuild]::IsOSPlatform('osx')))" />
+  </ItemGroup>
+
+  <PropertyGroup>
+    <!-- Razor files are needed for the backoffice to work correctly -->
+    <CopyRazorGenerateFilesToPublishDirectory>true</CopyRazorGenerateFilesToPublishDirectory>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <!-- Remove RazorCompileOnBuild and RazorCompileOnPublish when not using ModelsMode InMemoryAuto -->
+    <RazorCompileOnBuild>false</RazorCompileOnBuild>
+    <RazorCompileOnPublish>false</RazorCompileOnPublish>
+  </PropertyGroup>
+  
+</Project>
