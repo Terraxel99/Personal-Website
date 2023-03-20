@@ -1,3 +1,4 @@
+using ExampleApplication;
 using XStatic.Core.App;
 
 namespace PersonalWebsite
@@ -40,6 +41,12 @@ namespace PersonalWebsite
             services.AddXStatic()
                 .Automatic()
                 .Build();
+
+            #if DEBUG
+            services.AddHostedService(sp => new NpmWatchHostedService(
+                enabled: sp.GetRequiredService<IWebHostEnvironment>().IsDevelopment(),
+                logger: sp.GetRequiredService<ILogger<NpmWatchHostedService>>()));
+            #endif
         }
 
         /// <summary>

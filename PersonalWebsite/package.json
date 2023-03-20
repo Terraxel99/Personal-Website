@@ -1,0 +1,30 @@
+{
+  "name": "personalwebsite",
+  "version": "1.0.0",
+  "description": "",
+  "main": "postcss.config.js",
+  "scripts": {
+    "prebuild:css": "rm -rf wwwroot/css",
+    "build:css": "sass --style compressed --no-source-map Styles:wwwroot/css",
+    "postbuild:css": "postcss wwwroot/css/site.css --replace",
+    "prewatch": "rm -rf wwwroot/css",
+    "watch": "sass --watch Styles:wwwroot/css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Terraxel99/Personal-Website.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Terraxel99/Personal-Website/issues"
+  },
+  "homepage": "https://github.com/Terraxel99/Personal-Website#readme",
+  "devDependencies": {
+    "autoprefixer": "^10.4.14",
+    "cssnano": "^5.1.15",
+    "cssnano-preset-advanced": "^5.3.10",
+    "postcss-cli": "^10.1.0",
+    "sass": "^1.59.3"
+  }
+}
