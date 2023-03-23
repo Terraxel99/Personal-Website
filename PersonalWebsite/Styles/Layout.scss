@@ -1,0 +1,169 @@
+﻿@import "Common.scss";
+
+header {
+    height: $headerHeight;
+    background-color: $secondaryColor;
+
+    .topbar {
+        height: 100%;
+        display: flex;
+
+        .hamburger-container {
+            height: 100%;
+        }
+
+        .hamburger-lines {
+            height: 26px;
+            width: $hamburgerWidth;
+            position: relative;
+            top: 50%;
+            transform: translateY(-50%);
+            left: $hamburgerHorizontalSpacing;
+            z-index: 2;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .hamburger-lines .line {
+            display: block;
+            height: 4px;
+            width: 100%;
+            border-radius: 10px;
+            background-color: $accentColor;
+        }
+
+        .hamburger-lines .line1 {
+            transform-origin: 0% 0%;
+            transition: transform 0.4s ease-in-out;
+        }
+
+        .hamburger-lines .line2 {
+            transition: transform 0.2s ease-in-out;
+        }
+
+        .hamburger-lines .line3 {
+            transform-origin: 0% 100%;
+            transition: transform 0.4s ease-in-out;
+        }
+
+        &__content {
+            width: 100%;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            &__name {
+                z-index: 2;
+                
+                span.my-name {
+                    text-transform: uppercase;
+                    font-weight: 200;
+                    font-size: 2em;
+                }
+            }
+        }
+    }
+
+    input#nav-trigger {
+        display: none;
+
+        &:checked ~ nav.navigation {
+            left: 0;
+        }
+
+        &:checked ~ .topbar > .hamburger-lines .line1 {
+            transform: rotate(45deg);
+            margin-top: 1px;
+        }
+
+        &:checked ~ .topbar > .hamburger-lines .line2 {
+            transform: scaleY(0);
+        }
+
+        &:checked ~ .topbar > .hamburger-lines .line3 {
+            transform: rotate(-45deg);
+        }
+    }
+
+    .navigation {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 60%;
+        height: 100%;
+        left: -60%;
+        transition: left 250ms ease-in-out;
+        background-color: $secondaryColor;
+        z-index: 1;
+
+        &__links {
+            margin-top: $headerHeight;
+            padding-left: 0;
+            list-style-type: none;
+
+            &__link {
+
+                a {
+                    display: block;
+                    padding: .5rem 2rem;
+                    text-decoration: none;
+                    color: white;
+                    transition: color .3s ease, background-color .3s ease;
+
+                    &:hover,
+                    &:active,
+                    &:focus {
+                        background-color: $accentColor;
+                        color: $blackColor;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1025px) {
+    header {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        padding: 0 1rem;
+
+        .topbar {
+            .hamburger-container {
+                display: none;
+            }
+
+            &__content {
+                padding: 0;
+            }
+        }
+
+        .navigation {
+            position: static;
+            width: unset;
+            display: flex;
+            align-items: center;
+
+            &__links {
+                display: flex;
+                align-items: center;
+                margin: 0;
+
+                &__link {
+                    margin-right: .5rem;
+
+                    &::last-child {
+                        margin-right: 0;
+                    }
+                    
+                    > a {
+                        border-radius: 3px;
+                    }
+                }
+            }
+        }
+    }
+}

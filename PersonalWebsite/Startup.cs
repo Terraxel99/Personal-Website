@@ -72,6 +72,11 @@ namespace PersonalWebsite
                     u.UseInstallerEndpoints();
                     u.UseBackOfficeEndpoints();
                     u.UseWebsiteEndpoints();
+
+                    u.EndpointRouteBuilder.MapControllerRoute(
+                           "vanilla-route",
+                           "/vanilla/{action}/{id?}",
+                           new { Controller = "Vanilla", Action = "Index" });
                 });
         }
     }

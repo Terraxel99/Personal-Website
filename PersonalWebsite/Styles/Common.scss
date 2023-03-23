@@ -1,6 +1,15 @@
-﻿html,
+﻿@import "Variables.scss";
+
+html,
 body {
     margin: 0;
     padding: 0;
+    
+    color: $whiteColor;
+    background-color: $primaryColor;
+}
+
+* {
     box-sizing: border-box;
+    font-family: 'Montserrat', Times, serif;
 }

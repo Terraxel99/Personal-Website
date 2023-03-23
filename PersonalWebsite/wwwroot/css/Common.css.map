@@ -1,1 +1,1 @@
-{"version":3,"sourceRoot":"","sources":["../../Styles/Common.scss"],"names":[],"mappings":"AAAC;AAAA;EAEG;EACA;EACA","file":"Common.css"}
+{"version":3,"sourceRoot":"","sources":["../../Styles/Common.scss","../../Styles/Variables.scss"],"names":[],"mappings":"AAEA;AAAA;EAEI;EACA;EAEA,OCDS;EDET,kBCRY;;;ADWhB;EACI;EACA","file":"Common.css"}
