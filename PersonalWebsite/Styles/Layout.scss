@@ -73,16 +73,16 @@ header {
             left: 0;
         }
 
-        &:checked ~ .topbar > .hamburger-lines .line1 {
+        &:checked ~ .topbar .hamburger-container > .hamburger-lines .line1 {
             transform: rotate(45deg);
             margin-top: 1px;
         }
 
-        &:checked ~ .topbar > .hamburger-lines .line2 {
+        &:checked ~ .topbar .hamburger-container > .hamburger-lines .line2 {
             transform: scaleY(0);
         }
 
-        &:checked ~ .topbar > .hamburger-lines .line3 {
+        &:checked ~ .topbar .hamburger-container > .hamburger-lines .line3 {
             transform: rotate(-45deg);
         }
     }

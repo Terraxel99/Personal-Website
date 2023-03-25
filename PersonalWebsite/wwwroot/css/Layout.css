@@ -3,7 +3,6 @@ body {
   margin: 0;
   padding: 0;
   color: #FFF;
-  background-color: #2C3333;
 }
 
 * {
@@ -72,14 +71,14 @@ header input#nav-trigger {
 header input#nav-trigger:checked ~ nav.navigation {
   left: 0;
 }
-header input#nav-trigger:checked ~ .topbar > .hamburger-lines .line1 {
+header input#nav-trigger:checked ~ .topbar .hamburger-container > .hamburger-lines .line1 {
   transform: rotate(45deg);
   margin-top: 1px;
 }
-header input#nav-trigger:checked ~ .topbar > .hamburger-lines .line2 {
+header input#nav-trigger:checked ~ .topbar .hamburger-container > .hamburger-lines .line2 {
   transform: scaleY(0);
 }
-header input#nav-trigger:checked ~ .topbar > .hamburger-lines .line3 {
+header input#nav-trigger:checked ~ .topbar .hamburger-container > .hamburger-lines .line3 {
   transform: rotate(-45deg);
 }
 header .navigation {
