@@ -4,9 +4,9 @@
   "description": "",
   "main": "postcss.config.js",
   "scripts": {
-    "prebuild:css": "rm -rf wwwroot/css",
+    "prebuild:css": "rmdir \"wwwroot/css\" /s /q",
     "build:css": "sass --style compressed --no-source-map Styles:wwwroot/css",
-    "postbuild:css": "postcss wwwroot/css/site.css --replace",
+    "postbuild:css": "postcss wwwroot/css/Common.css --replace",
     "prewatch": "rm -rf wwwroot/css",
     "watch": "sass --watch Styles:wwwroot/css"
   },

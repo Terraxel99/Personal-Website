@@ -1,1 +1,142 @@
-﻿
+﻿@import "Variables.scss";
+
+@mixin subsection-title__line {
+    content: "";
+    position: absolute;
+    height: 2px;
+    width: 100%;
+    top: 50%;
+}
+
+.introduction {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    > div {
+        padding: 0 20%;
+    }
+
+    h1.page-title {
+        margin: .5rem 0 0 0;
+        font-size: 3em;
+    }
+
+    &__greeting {
+        color: $accentColor;
+    }
+
+    &__funny-sentence {
+        font-size: 2em;
+        font-weight: 200;
+    }
+
+    &__description {
+        margin-top: 2rem;
+    }
+
+    canvas#finisher-canvas {
+        margin-top: $headerHeight;
+        top: -90px;
+    }
+}
+
+.subsections {
+    position: relative;
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: -30px;
+        height: 30px;
+        width: 100vw;
+        background-color: $lightGrayColor;
+        z-index: -2;
+    }
+
+    &__section {
+        padding: 2rem 15%;
+
+        &__title-container {
+            position: relative;
+            display: flex;
+        }
+
+        &:nth-child(odd) {
+            background-color: $lightGrayColor;
+            color: $blackColor;
+
+            > div.subsections__section__title-container {
+                &::after {
+                    @include subsection-title__line;
+                    background-color: $secondaryColor;
+                }
+
+                > .subsections__section__title {
+                    color: $primaryColor;
+                    background-color: $lightGrayColor;
+                    z-index: 2;
+                    padding-right: 1.5rem;
+                }
+            }
+        }
+
+        &:nth-child(even) {
+            background-color: $primaryColor;
+
+            > div.subsections__section__title-container {
+                flex-direction: row-reverse;
+
+                &::before {
+                    @include subsection-title__line;
+                    background-color: $secondaryColor;
+                }
+
+                > .subsections__section__title {
+                    color: $whiteColor;
+                    background-color: $primaryColor;
+                    text-align: right;
+                    position: relative;
+                    z-index: 2;
+                    display: block;
+                    padding-left: 1.5rem;
+                }
+            }
+        }
+
+        &__title {
+            font-size: 3em;
+            margin: 0;
+        }
+
+        &.about {
+            .about__photo {
+                width: 100%;
+                padding: 2rem 10%;
+
+                > img {
+                    width: 100%;
+                    object-fit: cover;
+                }
+            }
+
+            .about__technologies {
+                margin-bottom: 1rem;
+                padding: 0 2rem;
+
+                &__technology {
+                    display: flex;
+                    align-items: center;
+
+                    > img {
+                        width: 20px;
+                    }
+
+                    > span {
+                        margin-left: .5rem;
+                    }
+                }
+            }
+        }
+    }
+}

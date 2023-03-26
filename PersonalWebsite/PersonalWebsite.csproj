@@ -5,6 +5,12 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Remove="umbraco\**" />
+    <Content Remove="umbraco\**" />
+    <EmbeddedResource Remove="umbraco\**" />
+    <None Remove="umbraco\**" />
+  </ItemGroup>
+  <ItemGroup>
     <Content Include="App_Plugins\xStatic\css\xStatic.css" />
     <Content Include="App_Plugins\xStatic\dashboards\ActionForm.html" />
     <Content Include="App_Plugins\xStatic\dashboards\ActionsDashboard.html" />
@@ -74,7 +80,7 @@
 
   <Target Name="Compile SCSS" BeforeTargets="CopyFilesToPublishDirectory">
     <Exec Command="npm run build:css" />
-    <Copy SourceFiles="$(ProjectDir)wwwroot/css/site.css" DestinationFolder="$(PublishDir)wwwroot/css" />
+    <!--<Copy SourceFiles="$(ProjectDir)wwwroot/css/site.css" DestinationFolder="$(PublishDir)wwwroot/css" />-->
   </Target>
   
 </Project>

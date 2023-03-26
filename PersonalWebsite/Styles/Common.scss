@@ -12,3 +12,19 @@ body {
     box-sizing: border-box;
     font-family: 'Montserrat', Times, serif;
 }
+
+.color-primary {
+    color: $primaryColor;
+}
+
+.color-secondary {
+    color: $secondaryColor;
+}
+
+.color-tertiary {
+    color: $tertiaryColor;
+}
+
+.color-accent {
+    color: $accentColor;
+}

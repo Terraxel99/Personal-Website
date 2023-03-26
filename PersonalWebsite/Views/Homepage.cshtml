@@ -9,37 +9,126 @@
     <link rel="stylesheet" href="~/css/Homepage.css" />
 }
 
-@section Scripts {
-
+@section BodyScripts {
+    <script type="text/javascript" src="~/js/finisher-header.es5.min.js"></script>
+    <script type="text/javascript" src="~/js/create-header.js"></script>
 }
 
 <section class="introduction finisher-header" style="width: 100%; height: 600px;">
-    <span>Hello, I am</span>
-    <h1>Dudziak Thomas</h1>
-    <span>Code is my superpower</span>
 
-    <p>
-        I am a computer science student at the Free University of Brussels (ULB) who is passionate about programming. I am currently looking for an intership in game development, web development or embedded systems.
-    </p>
+    <div>
+        <span class="introduction__greeting">Hello, I am</span>
+        <h1 class="page-title">Dudziak Thomas</h1>
+        <span class="introduction__funny-sentence">Code is my superpower</span>
+
+        <p class="introduction__description">
+            I am a computer science student at the Free University of Brussels (ULB) who is passionate about programming. I am currently looking for an intership in game development, web development or embedded systems.
+        </p>
+    </div>
+
 </section>
 
 <div class="subsections">
-    <section>
-        <h2>About me</h2>
+    <section class="subsections__section about">
+
+        <div class="subsections__section__title-container">
+            <h2 class="subsections__section__title  about__title">About me</h2>
+        </div>
+
+
+        <div class="subsections__section__content about__content">
+            <p>Hey there ! I am Thomas, a programming enthusiast. I love using my skills to create and automate things. From low-level programming, passing by embedded systems and going to web development, I am a code lover. My journey started when I was 15 when I wanted to understand how were computers working and how I could take advantage of them. That is when I started to program in C.</p>
+            <p>After hesitating between a whole bunch of science professions, I finally decided to study IT at HELHA and fell in love with web development. After working for one year as a web developer, I thought that I would deepen my computer knowledge and decided to take back studies and started a master in computer science at the Université Libre de Bruxelles (ULB) in 2021.</p>
+        </div>
+
+        <div class="about__technologies">
+            <article class="about__technologies__technology">
+                <img alt="Logo" src="~/media/logo.svg" />
+                <span>Git</span>
+            </article>
+            <article class="about__technologies__technology">
+                <img alt="Logo" src="~/media/logo.svg" />
+                <span>Git</span>
+            </article>
+            <article class="about__technologies__technology">
+                <img alt="Logo" src="~/media/logo.svg" />
+                <span>Git</span>
+            </article>
+            <article class="about__technologies__technology">
+                <img alt="Logo" src="~/media/logo.svg" />
+                <span>Git</span>
+            </article>
+            <article class="about__technologies__technology">
+                <img alt="Logo" src="~/media/logo.svg" />
+                <span>Git</span>
+            </article>
+            <article class="about__technologies__technology">
+                <img alt="Logo" src="~/media/logo.svg" />
+                <span>Git</span>
+            </article>
+            <article class="about__technologies__technology">
+                <img alt="Logo" src="~/media/logo.svg" />
+                <span>Git</span>
+            </article>
+            <article class="about__technologies__technology">
+                <img alt="Logo" src="~/media/logo.svg" />
+                <span>Git</span>
+            </article>
+            <article class="about__technologies__technology">
+                <img alt="Logo" src="~/media/logo.svg" />
+                <span>Git</span>
+            </article>
+            <article class="about__technologies__technology">
+                <img alt="Logo" src="~/media/logo.svg" />
+                <span>Git</span>
+            </article>
+            <article class="about__technologies__technology">
+                <img alt="Logo" src="~/media/logo.svg" />
+                <span>Git</span>
+            </article>
+            <article class="about__technologies__technology">
+                <img alt="Logo" src="~/media/logo.svg" />
+                <span>Git</span>
+            </article>
+        </div>
+
+        <div class="about__disclaimer">
+            <span>Spoiler : Never talk about aviation with me unless you want to have a 10-hour conversation :)</span>
+        </div>
+
+        <div class="about__photo">
+            <img alt="Picture of me" src="~/media/me.jpg" />
+        </div>
     </section>
 
-    <section>
-        <h2>Experience</h2>
+
+    <section class="subsections__section experience">
+        <div class="subsections__section__title-container">
+            <h2 class="subsections__section__title experience__title">Experience</h2>
+        </div>
+
+        <div class="subsections__section__content experience__content">
+
+        </div>
     </section>
 
-    <section>   
-        <h2>Some of my projects</h2>
+    <section class="subsections__section projects">
+        <div class="subsections__section__title-container">
+            <h2 class="subsections__section__title projects__title">Projects</h2>
+        </div>
+
+        <div class="subsections__section__content projects__content">
+
+        </div>
     </section>
-    
-    <section>
-        <h2>Contact me</h2>
+
+    <section class="subsections__section contact">
+        <div class="subsections__section__title-container">
+            <h2 class="subsections__section__title contact__title">Contact me</h2>
+        </div>
+
+        <div class="subsections__section__content contact__content">
+            <p></p>
+        </div>
     </section>
 </div>
-
-<script type="text/javascript" src="~/js/finisher-header.es5.min.js"></script>
-<script type="text/javascript" src="~/js/create-header.js"></script>

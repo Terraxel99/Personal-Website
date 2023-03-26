@@ -1,8 +1,13 @@
 ﻿@import "Common.scss";
 
+@mixin topbar__active-btn {
+    background-color: $secondaryColor;
+    color: $primaryColor;
+}
+
 header {
     height: $headerHeight;
-    background-color: $secondaryColor;
+    background-color: $primaryColor;
 
     .topbar {
         height: 100%;
@@ -10,6 +15,7 @@ header {
 
         .hamburger-container {
             height: 100%;
+            z-index: 4;
         }
 
         .hamburger-lines {
@@ -23,6 +29,7 @@ header {
             display: flex;
             flex-direction: column;
             justify-content: space-between;
+            cursor: pointer;
         }
 
         .hamburger-lines .line {
@@ -95,8 +102,8 @@ header {
         height: 100%;
         left: -60%;
         transition: left 250ms ease-in-out;
-        background-color: $secondaryColor;
-        z-index: 1;
+        background-color: $primaryColor;
+        z-index: 3;
 
         &__links {
             margin-top: $headerHeight;
@@ -104,6 +111,10 @@ header {
             list-style-type: none;
 
             &__link {
+
+                &.active a {
+                    @include topbar__active-btn;
+                }
 
                 a {
                     display: block;
@@ -115,12 +126,21 @@ header {
                     &:hover,
                     &:active,
                     &:focus {
-                        background-color: $accentColor;
-                        color: $blackColor;
+                        @include topbar__active-btn;
                     }
                 }
             }
         }
+    }
+}
+
+.footer {
+    background-color: $secondaryColor;
+
+    &__copyright {
+        margin: 0;
+        padding: 1rem 0;
+        text-align: center;
     }
 }
 
@@ -155,7 +175,7 @@ header {
                 &__link {
                     margin-right: .5rem;
 
-                    &::last-child {
+                    &:last-child {
                         margin-right: 0;
                     }
                     
