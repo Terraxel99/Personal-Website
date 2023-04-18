@@ -138,5 +138,183 @@
                 }
             }
         }
+
+        &.experience {
+
+            .experience__content {
+                margin-top: 2rem;
+                margin-left: 1rem;
+
+                &__item {
+                    position: relative;
+                    padding-left: 1rem;
+                    margin-bottom: 1.5rem;
+                    border-left: 2px solid $tertiaryColor;
+
+                    &:hover,
+                    &:active,
+                    &:focus {
+                        border-color: $accentColor;
+                    }
+
+                    &__position {
+                        font-size: 1.2em;
+                        display: block;
+                    }
+
+                    &__enterprise {
+                        color: $accentColor;
+                        text-decoration: none;
+
+                        &::before {
+                            content: "@";
+                        }
+
+                        &:hover,
+                        &:focus,
+                        &:active {
+                            color: darken($accentColor, 20%);
+                        }
+                    }
+
+                    &__dates {
+                        &__start {
+                            &::after {
+                                content: " -";
+                            }
+                        }
+                    }
+
+                    &__place,
+                    &__dates {
+                        font-size: .8em;
+                        padding-left: .5rem;
+                    }
+
+                    &__description {
+                        padding-left: .5rem;
+                        font-size: .9rem;
+
+                        > p {
+                            margin-top: 1rem;
+                            margin-bottom: 0;
+                        }
+                    }
+                }
+            }
+        }
+
+        &.projects {
+
+            .projects__content {
+
+                &__disclaimer {
+                    margin-bottom: 1.5rem;
+                }
+
+                &__project-list {
+
+                    &__item {
+                        background-color: $primaryColor;
+                        color: lighten($primaryColor, 75%);
+                        border-radius: 8px;
+                        padding: 1.5rem;
+                        transition: transform 200ms ease-in-out;
+                        margin-bottom: 1rem;
+
+                        &:last-child {
+                            margin-bottom: 0;   
+                        }
+
+                        &:hover {
+                            transform: scale(1.05);
+
+                            .projects__content__project-list__item__title {
+                                color: $accentColor;
+                            }
+                        }
+
+                        &__header {
+                            display: flex;
+                            justify-content: space-between;
+                        }
+
+                        &__title,
+                        &__date {
+                            display: block;
+                        }
+
+                        &__title {
+                            font-size: 1.3em;
+                            color: $whiteColor;
+                            text-decoration: none;
+
+                            &:hover,
+                            &:focus,
+                            &:active {
+                                color: $accentColor;
+                            }
+                        }
+
+                        &__date {
+                            font-size: .8em;
+                        }
+
+                        &__description {
+                            color: $whiteColor;
+                            font-size: .9em;
+                        }
+
+                        &__technologies {
+                            list-style-type: none;
+                            margin-top: 1rem;
+                            margin-bottom: 0;
+                            padding: 0;
+                            display: block;
+
+                            li {
+                                padding: .2rem .5rem;
+                                background-color: lighten($primaryColor, 10%);
+                                display: inline-block;
+                                font-size: .8em;
+                                margin-bottom: .2rem;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        &.contact {
+
+            .contact__content {
+                margin-top: 2rem;
+
+                &__button-container {
+                    display: flex;
+                    justify-content: center;
+                }
+
+                &__button {
+                    text-decoration: none;
+                    margin-top: 1rem;
+                    margin-bottom: 1.5rem;
+                    display: inline-block;
+                    color: $accentColor;
+                    border: 1px solid $accentColor;
+                    border-radius: 3px;
+                    padding: 1rem 2rem;
+                    cursor: pointer;
+                    text-align: center;
+                    width: 80%;
+
+                    &:hover,
+                    &:active,
+                    &:focus {
+                        background-color: rgba(166, 201, 166, 0.2);
+                    }
+                }
+            }
+        }
     }
 }

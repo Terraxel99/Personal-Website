@@ -1,1 +1,236 @@
-.introduction{display:flex;flex-direction:column;justify-content:center}.introduction>div{padding:0 20%}.introduction h1.page-title{margin:.5rem 0 0 0;font-size:3em}.introduction__greeting{color:#a6c9a6}.introduction__funny-sentence{font-size:2em;font-weight:200}.introduction__description{margin-top:2rem}.introduction canvas#finisher-canvas{margin-top:90px;top:-90px}.subsections{position:relative}.subsections::before{content:"";position:absolute;top:-30px;height:30px;width:100vw;background-color:#f1f5f8;z-index:-2}.subsections__section{padding:2rem 15%}.subsections__section__title-container{position:relative;display:flex}.subsections__section:nth-child(odd){background-color:#f1f5f8;color:#000}.subsections__section:nth-child(odd)>div.subsections__section__title-container::after{content:"";position:absolute;height:2px;width:100%;top:50%;background-color:#5da3fe}.subsections__section:nth-child(odd)>div.subsections__section__title-container>.subsections__section__title{color:#0a1128;background-color:#f1f5f8;z-index:2;padding-right:1.5rem}.subsections__section:nth-child(even){background-color:#0a1128}.subsections__section:nth-child(even)>div.subsections__section__title-container{flex-direction:row-reverse}.subsections__section:nth-child(even)>div.subsections__section__title-container::before{content:"";position:absolute;height:2px;width:100%;top:50%;background-color:#5da3fe}.subsections__section:nth-child(even)>div.subsections__section__title-container>.subsections__section__title{color:#fff;background-color:#0a1128;text-align:right;position:relative;z-index:2;display:block;padding-left:1.5rem}.subsections__section__title{font-size:3em;margin:0}.subsections__section.about .about__photo{width:100%;padding:2rem 10%}.subsections__section.about .about__photo>img{width:100%;object-fit:cover}.subsections__section.about .about__technologies{margin-bottom:1rem;padding:0 2rem}.subsections__section.about .about__technologies__technology{display:flex;align-items:center}.subsections__section.about .about__technologies__technology>img{width:20px}.subsections__section.about .about__technologies__technology>span{margin-left:.5rem}
+.introduction {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.introduction > div {
+  padding: 0 20%;
+}
+.introduction h1.page-title {
+  margin: 0.5rem 0 0 0;
+  font-size: 3em;
+}
+.introduction__greeting {
+  color: #A6C9A6;
+}
+.introduction__funny-sentence {
+  font-size: 2em;
+  font-weight: 200;
+}
+.introduction__description {
+  margin-top: 2rem;
+}
+.introduction canvas#finisher-canvas {
+  margin-top: 90px;
+  top: -90px;
+}
+
+.subsections {
+  position: relative;
+}
+.subsections::before {
+  content: "";
+  position: absolute;
+  top: -30px;
+  height: 30px;
+  width: 100vw;
+  background-color: #F1F5F8;
+  z-index: -2;
+}
+.subsections__section {
+  padding: 2rem 15%;
+}
+.subsections__section__title-container {
+  position: relative;
+  display: flex;
+}
+.subsections__section:nth-child(odd) {
+  background-color: #F1F5F8;
+  color: #000;
+}
+.subsections__section:nth-child(odd) > div.subsections__section__title-container::after {
+  content: "";
+  position: absolute;
+  height: 2px;
+  width: 100%;
+  top: 50%;
+  background-color: #5DA3FE;
+}
+.subsections__section:nth-child(odd) > div.subsections__section__title-container > .subsections__section__title {
+  color: #0A1128;
+  background-color: #F1F5F8;
+  z-index: 2;
+  padding-right: 1.5rem;
+}
+.subsections__section:nth-child(even) {
+  background-color: #0A1128;
+}
+.subsections__section:nth-child(even) > div.subsections__section__title-container {
+  flex-direction: row-reverse;
+}
+.subsections__section:nth-child(even) > div.subsections__section__title-container::before {
+  content: "";
+  position: absolute;
+  height: 2px;
+  width: 100%;
+  top: 50%;
+  background-color: #5DA3FE;
+}
+.subsections__section:nth-child(even) > div.subsections__section__title-container > .subsections__section__title {
+  color: #FFF;
+  background-color: #0A1128;
+  text-align: right;
+  position: relative;
+  z-index: 2;
+  display: block;
+  padding-left: 1.5rem;
+}
+.subsections__section__title {
+  font-size: 3em;
+  margin: 0;
+}
+.subsections__section.about .about__photo {
+  width: 100%;
+  padding: 2rem 10%;
+}
+.subsections__section.about .about__photo > img {
+  width: 100%;
+  object-fit: cover;
+}
+.subsections__section.about .about__technologies {
+  margin-bottom: 1rem;
+  padding: 0 2rem;
+}
+.subsections__section.about .about__technologies__technology {
+  display: flex;
+  align-items: center;
+}
+.subsections__section.about .about__technologies__technology > img {
+  width: 20px;
+}
+.subsections__section.about .about__technologies__technology > span {
+  margin-left: 0.5rem;
+}
+.subsections__section.experience .experience__content {
+  margin-top: 2rem;
+  margin-left: 1rem;
+}
+.subsections__section.experience .experience__content__item {
+  position: relative;
+  padding-left: 1rem;
+  margin-bottom: 1.5rem;
+  border-left: 2px solid #E0AFA0;
+}
+.subsections__section.experience .experience__content__item:hover, .subsections__section.experience .experience__content__item:active, .subsections__section.experience .experience__content__item:focus {
+  border-color: #A6C9A6;
+}
+.subsections__section.experience .experience__content__item__position {
+  font-size: 1.2em;
+  display: block;
+}
+.subsections__section.experience .experience__content__item__enterprise {
+  color: #A6C9A6;
+  text-decoration: none;
+}
+.subsections__section.experience .experience__content__item__enterprise::before {
+  content: "@";
+}
+.subsections__section.experience .experience__content__item__enterprise:hover, .subsections__section.experience .experience__content__item__enterprise:focus, .subsections__section.experience .experience__content__item__enterprise:active {
+  color: #67a267;
+}
+.subsections__section.experience .experience__content__item__dates__start::after {
+  content: " -";
+}
+.subsections__section.experience .experience__content__item__place, .subsections__section.experience .experience__content__item__dates {
+  font-size: 0.8em;
+  padding-left: 0.5rem;
+}
+.subsections__section.experience .experience__content__item__description {
+  padding-left: 0.5rem;
+  font-size: 0.9rem;
+}
+.subsections__section.experience .experience__content__item__description > p {
+  margin-top: 1rem;
+  margin-bottom: 0;
+}
+.subsections__section.projects .projects__content__disclaimer {
+  margin-bottom: 1.5rem;
+}
+.subsections__section.projects .projects__content__project-list__item {
+  background-color: #0A1128;
+  color: #c1ccf0;
+  border-radius: 8px;
+  padding: 1.5rem;
+  transition: transform 200ms ease-in-out;
+  margin-bottom: 1rem;
+}
+.subsections__section.projects .projects__content__project-list__item:last-child {
+  margin-bottom: 0;
+}
+.subsections__section.projects .projects__content__project-list__item:hover {
+  transform: scale(1.05);
+}
+.subsections__section.projects .projects__content__project-list__item:hover .projects__content__project-list__item__title {
+  color: #A6C9A6;
+}
+.subsections__section.projects .projects__content__project-list__item__header {
+  display: flex;
+  justify-content: space-between;
+}
+.subsections__section.projects .projects__content__project-list__item__title, .subsections__section.projects .projects__content__project-list__item__date {
+  display: block;
+}
+.subsections__section.projects .projects__content__project-list__item__title {
+  font-size: 1.3em;
+  color: #FFF;
+  text-decoration: none;
+}
+.subsections__section.projects .projects__content__project-list__item__title:hover, .subsections__section.projects .projects__content__project-list__item__title:focus, .subsections__section.projects .projects__content__project-list__item__title:active {
+  color: #A6C9A6;
+}
+.subsections__section.projects .projects__content__project-list__item__date {
+  font-size: 0.8em;
+}
+.subsections__section.projects .projects__content__project-list__item__description {
+  color: #FFF;
+  font-size: 0.9em;
+}
+.subsections__section.projects .projects__content__project-list__item__technologies {
+  list-style-type: none;
+  margin-top: 1rem;
+  margin-bottom: 0;
+  padding: 0;
+  display: block;
+}
+.subsections__section.projects .projects__content__project-list__item__technologies li {
+  padding: 0.2rem 0.5rem;
+  background-color: #142251;
+  display: inline-block;
+  font-size: 0.8em;
+  margin-bottom: 0.2rem;
+}
+.subsections__section.contact .contact__content {
+  margin-top: 2rem;
+}
+.subsections__section.contact .contact__content__button-container {
+  display: flex;
+  justify-content: center;
+}
+.subsections__section.contact .contact__content__button {
+  text-decoration: none;
+  margin-top: 1rem;
+  margin-bottom: 1.5rem;
+  display: inline-block;
+  color: #A6C9A6;
+  border: 1px solid #A6C9A6;
+  border-radius: 3px;
+  padding: 1rem 2rem;
+  cursor: pointer;
+  text-align: center;
+  width: 80%;
+}
+.subsections__section.contact .contact__content__button:hover, .subsections__section.contact .contact__content__button:active, .subsections__section.contact .contact__content__button:focus {
+  background-color: rgba(166, 201, 166, 0.2);
+}
+
+/*# sourceMappingURL=Homepage.css.map */
