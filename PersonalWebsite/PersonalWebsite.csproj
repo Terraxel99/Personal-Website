@@ -9,6 +9,8 @@
     <Content Remove="umbraco\**" />
     <EmbeddedResource Remove="umbraco\**" />
     <None Remove="umbraco\**" />
+    <None Remove="Styles\Components\" />
+    <Content Remove="wwwroot\files\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="App_Plugins\xStatic\css\xStatic.css" />
@@ -61,6 +63,10 @@
     <RuntimeHostConfigurationOption Include="System.Globalization.AppLocalIcu" Value="68.2.0.9" Condition="$(RuntimeIdentifier.StartsWith('linux')) or $(RuntimeIdentifier.StartsWith('win')) or ('$(RuntimeIdentifier)' == '' and !$([MSBuild]::IsOSPlatform('osx')))" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Styles\Components\" />
+    <Folder Include="wwwroot\files\" />
+  </ItemGroup>
   <PropertyGroup>
     <!-- Razor files are needed for the backoffice to work correctly -->
     <CopyRazorGenerateFilesToPublishDirectory>true</CopyRazorGenerateFilesToPublishDirectory>
