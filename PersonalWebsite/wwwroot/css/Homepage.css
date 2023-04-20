@@ -217,20 +217,28 @@
   display: grid;
 }
 .subsections__section.projects .projects__content__project-list__item {
-  background-color: #0A1128;
-  color: #c1ccf0;
-  border-radius: 8px;
-  padding: 1.5rem;
-  transition: transform 200ms ease-in-out;
   margin-bottom: 1rem;
 }
-.subsections__section.projects .projects__content__project-list__item:last-child {
+.subsections__section.projects .projects__content__project-list__item > a {
+  background-color: #0A1128;
+  color: #c1ccf0;
+  padding: 1.5rem;
+  border-radius: 8px;
+  transition: transform 200ms ease-in-out;
+  text-decoration: none;
+  display: block;
+  height: 100%;
+}
+.subsections__section.projects .projects__content__project-list__item > a:last-child {
   margin-bottom: 0;
 }
-.subsections__section.projects .projects__content__project-list__item:hover {
+.subsections__section.projects .projects__content__project-list__item > a:hover, .subsections__section.projects .projects__content__project-list__item > a:active, .subsections__section.projects .projects__content__project-list__item > a:focus {
   transform: scale(1.05);
 }
-.subsections__section.projects .projects__content__project-list__item:hover .projects__content__project-list__item__title {
+.subsections__section.projects .projects__content__project-list__item > a:hover .projects__content__project-list__item__title, .subsections__section.projects .projects__content__project-list__item > a:active .projects__content__project-list__item__title, .subsections__section.projects .projects__content__project-list__item > a:focus .projects__content__project-list__item__title {
+  color: #A6C9A6;
+}
+.subsections__section.projects .projects__content__project-list__item > a:hover .projects__content__project-list__item__links i, .subsections__section.projects .projects__content__project-list__item > a:active .projects__content__project-list__item__links i, .subsections__section.projects .projects__content__project-list__item > a:focus .projects__content__project-list__item__links i {
   color: #A6C9A6;
 }
 .subsections__section.projects .projects__content__project-list__item__header {
@@ -251,13 +259,10 @@
 .subsections__section.projects .projects__content__project-list__item__date {
   font-size: 0.8rem;
 }
-.subsections__section.projects .projects__content__project-list__item__links > a {
+.subsections__section.projects .projects__content__project-list__item__links > i {
   text-decoration: none;
   color: #FFF;
   font-size: 20px;
-}
-.subsections__section.projects .projects__content__project-list__item__links > a:hover, .subsections__section.projects .projects__content__project-list__item__links > a:active, .subsections__section.projects .projects__content__project-list__item__links > a:focus {
-  color: #A6C9A6;
 }
 .subsections__section.projects .projects__content__project-list__item__description {
   color: #FFF;

@@ -269,22 +269,34 @@
                     display: grid;
 
                     &__item {
-                        background-color: $primaryColor;
-                        color: lighten($primaryColor, 75%);
-                        border-radius: 8px;
-                        padding: 1.5rem;
-                        transition: transform 200ms ease-in-out;
                         margin-bottom: 1rem;
 
-                        &:last-child {
-                            margin-bottom: 0;
-                        }
+                        > a {
+                            background-color: $primaryColor;
+                            color: lighten($primaryColor, 75%);
+                            padding: 1.5rem;
+                            border-radius: 8px;
+                            transition: transform 200ms ease-in-out;
+                            text-decoration: none;
+                            display: block;
+                            height: 100%;
 
-                        &:hover {
-                            transform: scale(1.05);
+                            &:last-child {
+                                margin-bottom: 0;
+                            }
 
-                            .projects__content__project-list__item__title {
-                                color: $accentColor;
+                            &:hover,
+                            &:active,
+                            &:focus {
+                                transform: scale(1.05);
+
+                                .projects__content__project-list__item__title {
+                                    color: $accentColor;
+                                }
+
+                                .projects__content__project-list__item__links i {
+                                    color: $accentColor;
+                                }
                             }
                         }
 
@@ -315,16 +327,10 @@
                         }
 
                         &__links {
-                            > a {
+                            > i {
                                 text-decoration: none;
                                 color: $whiteColor;
                                 font-size: 20px;
-
-                                &:hover,
-                                &:active,
-                                &:focus {
-                                    color: $accentColor;
-                                }
                             }
                         }
 
